@@ -1,0 +1,13 @@
+---
+title: "Practice-2-hw5"
+author: "Vrindha Vegiraju and Kennedy Wendl"
+date: "2023-03-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+
+life5060 = read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
+```
