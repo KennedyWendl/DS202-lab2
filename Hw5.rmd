@@ -11,3 +11,11 @@ library(ggplot2)
 
 life5060 = read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
 ```
+```{r}
+
+choco %>% 
+  ggplot(aes(x=Rating)) + geom_histogram(binwidth = 0.25)
+
+dim(df)
+ggplot(df, aes(x=Review.Date)) + geom_bar()
+```
