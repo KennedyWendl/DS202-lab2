@@ -76,3 +76,7 @@ ggplot(choco, aes(x = Bean.Type, y=Rating)) + geom_boxplot()
 
 ```
 To answer this question, I had to sort choco dataset into two factors: Bean.Type and Rating. With this, I could compare the correlation between the type of bean to see if it had any affect of the rating of the chocolate. The graph shows that there is not a very high correlation between the two factors.
+
+Workflow Paragraph 
+
+In order to complete this assignment, Vrinda and I worked together in github by commiting the changes we made on our individual computers. Overall, this project took a little bit of back and forth to complete but we were able to do so succesfully! 
