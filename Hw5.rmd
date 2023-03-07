@@ -79,4 +79,4 @@ To answer this question, I had to sort choco dataset into two factors: Bean.Type
 
 Workflow Paragraph 
 
-In order to complete this assignment, Vrinda and I worked together in github by commiting the changes we made on our individual computers. Overall, this project took a little bit of back and forth to complete but we were able to do so succesfully! 
+In order to complete this assignment, Vrinda and I worked together in github by committing the changes we made on our individual computers. Overall, this project took a little bit of back and forth to complete but we were able to do so successfully! 
