@@ -7,15 +7,52 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 library(ggplot2)
 
-life5060 = read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
 ```
+
 ```{r}
 
-choco %>% 
-  ggplot(aes(x=Rating)) + geom_histogram(binwidth = 0.25)
+choco <- read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
+chocoCompanies = dplyr::filter(choco, Company.Location %in% c("U.S.A.", "France", "Canada"))
 
-dim(df)
-ggplot(df, aes(x=Review.Date)) + geom_bar()
+head(choco)
+dim(choco)
+
+ggplot(choco, aes(x=Rating)) + geom_histogram(binwidth = 0.25)
+
+ggplot(choco, aes(x=Review.Date)) + geom_bar()
+
+ggplot(choco, aes(x=Rating)) + geom_histogram()
+
+ggplot(choco, aes(x = Rating, y = Cocoa.Pct)) + geom_jitter()
+
+ggplot(chocoCompanies, aes(x=Company.Location, y = Rating)) + geom_jitter() + coord_flip()
 ```
+## Homework 5 
+### Kennedy Wendl and Vrinda Vegiraju
+
+Question Set 1
+
+1. What is the overall number of chocolate bars rated?
+
+There are 1852 chocolate bar reviews.
+
+2. How does the number of ratings depend on the year? Draw a bar chart of the number of reports.
+
+As shown by the bar chart, the number of ratings increase over time until 2015. After that, the reviews slowly start to decline. 
+
+Question Set 2
+
+1. How are ratings distributed? Draw a histogram of ratings and describe it. Don’t forget to mention outliers, if there are any.
+
+Looking at the histogram I plotted above, the majority of chocolate ratings are between 3 and 4. The distribution is relatively normal, however there are outliers at ratings 1 and 5.
+
+2. Do ratings depend on the cocoa percentage of a chocolate bar?
+
+In order to find if the cocoa percentage of a chocolate bar has a clear relationship with it's rating, I used a scatter-plot to determine my findings. As shown in the plot above, there seems to be no direct correlation between the two. A majority of the ratings are grouped together between 2 and 4, varying in percentages of cocoa. 
+
+3. How do ratings compare across different company locations? Focus on the three locations with the most ratings.
+
+After creating the variable chocoCountries, which compares only Canada, France and the United States, we see how these countries have higher ratings compared to the overall histogram created earlier. Particularly, the United States has more ratings centered around 3.5 while the median for the previous graph was less than 3.5 for all countries. Additionally, Canada has some of the highest ratings with none going below 2.  
