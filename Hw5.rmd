@@ -71,7 +71,8 @@ In order to find the answer to this question I needed to plot an additional grap
 Vrinda Vegiraju
 2. Is there a correlation between the ingredients used and the rating of the chocolate?
 ```{r}
-choco %>% 
-  ggplot(aes(x=as.factor(Ingredients), y=Rating)) + geom_boxplot() 
+
+ggplot(choco, aes(x = Bean.Type, y=Rating)) + geom_boxplot()
+
 ```
-To answer this question, I had to sort choco dataset into two factors: Ingredients and Rating. With this, I could compare the correlation between ingredients in the chococalte to see if it had any affect of the rating of the chocolate. The graph shows that there is not a very high correlation between the two factors.
+To answer this question, I had to sort choco dataset into two factors: Bean.Type and Rating. With this, I could compare the correlation between the type of bean to see if it had any affect of the rating of the chocolate. The graph shows that there is not a very high correlation between the two factors.
