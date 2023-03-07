@@ -70,4 +70,7 @@ Kennedy Wendl
 In order to find the answer to this question I needed to plot an additional graph. Using a similar formula to the ones above, I first sorted the choco dataset by "Brazil" and Equateur". From there, I used a scatterplot to determine which country had the best rating. After looking at the graph I realize my question could have been much broader. Both of these coutnries don't have much data to go off of, and it's hard to determine who "truly" has the best rating. That being said, Brazil has the highest rating at a little over 4. 
 
 Vrinda Vegiraju
-2. 
+2. ```{r}
+choco %>% 
+  ggplot(aes(x=as.factor(Ingredients), y=Rating)) + geom_boxplot() 
+```
