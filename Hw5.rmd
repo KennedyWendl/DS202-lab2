@@ -37,8 +37,6 @@ ggplot(chocoCompanies, aes(x=Company.Location, y = Rating)) + geom_jitter() + co
 ggplot(chocoBrazilEquateur, aes(x = Rating, y = Specific.Bean.Origin)) + geom_jitter()
 
 ```
-## Homework 5 
-### Kennedy Wendl and Vrinda Vegiraju
 
 Question Set 1
 
