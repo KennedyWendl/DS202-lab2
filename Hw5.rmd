@@ -14,8 +14,12 @@ library(ggplot2)
 
 ```{r}
 
+#link to github
+githubLink = ("https://github.com/KennedyWendl/DS202-lab2/")
+
 choco <- read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
 chocoCompanies = dplyr::filter(choco, Company.Location %in% c("U.S.A.", "France", "Canada"))
+chocoBrazilEquateur = dplyr::filter(choco, Specific.Bean.Origin %in% c("Brazil", "Equateur"))
 
 head(choco)
 dim(choco)
@@ -29,6 +33,9 @@ ggplot(choco, aes(x=Rating)) + geom_histogram()
 ggplot(choco, aes(x = Rating, y = Cocoa.Pct)) + geom_jitter()
 
 ggplot(chocoCompanies, aes(x=Company.Location, y = Rating)) + geom_jitter() + coord_flip()
+
+ggplot(chocoBrazilEquateur, aes(x = Rating, y = Specific.Bean.Origin)) + geom_jitter()
+
 ```
 ## Homework 5 
 ### Kennedy Wendl and Vrinda Vegiraju
@@ -55,4 +62,14 @@ In order to find if the cocoa percentage of a chocolate bar has a clear relation
 
 3. How do ratings compare across different company locations? Focus on the three locations with the most ratings.
 
-After creating the variable chocoCountries, which compares only Canada, France and the United States, we see how these countries have higher ratings compared to the overall histogram created earlier. Particularly, the United States has more ratings centered around 3.5 while the median for the previous graph was less than 3.5 for all countries. Additionally, Canada has some of the highest ratings with none going below 2.  
+After creating the variable chocoCountries, which compares only Canada, France and the United States, we see how these countries have higher ratings compared to the overall histogram created earlier. Particularly, the United States has more ratings centered around 3.5 while the median for the previous graph was less than 3.5 for all countries. Additionally, Canada has some of the highest ratings with none going below 2. 
+
+Personal Question(s)
+
+Kennedy Wendl
+1. Which specific bean origin country has the highest overall rating, Brazil or Equateur?
+
+In order to find the answer to this question I needed to plot an additional graph. Using a similar formula to the ones above, I first sorted the choco dataset by "Brazil" and Equateur". From there, I used a scatterplot to determine which country had the best rating. After looking at the graph I realize my question could have been much broader. Both of these coutnries don't have much data to go off of, and it's hard to determine who "truly" has the best rating. That being said, Brazil has the highest rating at a little over 4. 
+
+Vrinda Vegiraju
+2. 
